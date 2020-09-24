@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACJ,gBAAgB,EAAE,UAAU;CAC5B;;AAED,AAAA,IAAI,CAAC;EACJ,KAAK,EAAE,cAAc;CACrB",
     "sources": [
-        "../sass/base/base.scss"
+        "../src/styles/base/base.scss"
     ],
     "names": [],
     "file": "base.css"
