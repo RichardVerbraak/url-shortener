@@ -1,7 +1,26 @@
-body {
-	background-color: blueviolet;
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-.nav {
-	color: blanchedalmond;
+body,
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-poppins;
+	font-size: $font-regular;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	max-width: 114rem;
+	margin: 0 auto;
 }
