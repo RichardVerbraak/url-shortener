@@ -17,16 +17,28 @@
 	justify-content: space-between;
 
 	&--input {
-		border: solid 2px $color-red;
-		border-radius: 5px;
 		flex: 0 0 80%;
 		padding: 1.7rem 2.5rem;
+		border-radius: 5px;
+		border: solid 2px $color-grey;
+
+		&:active,
+		&:focus {
+			outline: none;
+			border: solid 2px $color-red;
+		}
+
+		&:active,
+		&:focus {
+			&::placeholder {
+				color: rgba($color-red, 0.6);
+			}
+		}
 
 		&::placeholder {
 			font-family: $font-poppins;
 			letter-spacing: 1px;
 			font-size: 1.6rem;
-			color: rgba($color-red, 0.6);
 		}
 	}
 
@@ -35,6 +47,7 @@
 		border-radius: 5px;
 	}
 
+	//TODO: Show sub only when there is nothing in input field
 	&--sub {
 		margin-top: 1rem;
 		font-size: 1.4rem;
