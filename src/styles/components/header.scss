@@ -4,7 +4,7 @@
 	position: relative;
 	margin-bottom: 40rem;
 
-	// Temporary
+	// TODO: Make img element and absolute position it relative to the header so it gets taken out of the normal flow and doesnt affect horizontal scrolling
 	&::after {
 		position: absolute;
 		top: -25%;
