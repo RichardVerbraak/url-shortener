@@ -13,13 +13,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		flex: 0 0 25%;
+		flex: 0 0 23%;
 		margin-right: auto;
 
 		&--item {
 			color: $color-grey-violet;
 			font-size: 1.5rem;
-			font-weight: $font-bolder;
+			font-weight: $font-bold;
 		}
 	}
 
