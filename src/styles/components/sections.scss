@@ -1,9 +1,11 @@
 .section-heading {
+	position: relative;
 	background-color: white;
 	height: 80rem;
 }
 
+// Colors provided by project don't seem correct so I guessed a lighter shade of grey
 .section-statistics {
-	background-color: $color-grey;
+	background-color: rgba($color-grey-violet, 0.15);
 	height: 60rem;
 }

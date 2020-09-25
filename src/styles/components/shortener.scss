@@ -1,0 +1,44 @@
+.shortener__container {
+	display: flex;
+	flex-direction: column;
+
+	background: url(../../images/bg-shorten-desktop.svg);
+	background-color: $color-violet;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	border-radius: 5px;
+	padding: 5rem 4rem 2rem 4rem;
+	width: 100%;
+}
+
+.input__container {
+	display: flex;
+	justify-content: space-between;
+
+	&--input {
+		border: solid 2px $color-red;
+		border-radius: 5px;
+		flex: 0 0 80%;
+		padding: 1.7rem 2.5rem;
+
+		&::placeholder {
+			font-family: $font-poppins;
+			letter-spacing: 1px;
+			font-size: 1.6rem;
+			color: rgba($color-red, 0.6);
+		}
+	}
+
+	&--btn {
+		padding: 1rem 3.5rem;
+		border-radius: 5px;
+	}
+
+	&--sub {
+		margin-top: 1rem;
+		font-size: 1.4rem;
+		color: $color-red;
+		font-style: italic;
+	}
+}
