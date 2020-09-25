@@ -4,6 +4,7 @@ import Header from './Header'
 import Statistics from './Statistics'
 import Shortener from './Shortener'
 
+// Could be refactored to something cleaner?
 const Home = () => (
 	<Fragment>
 		<div className='section-heading'>
