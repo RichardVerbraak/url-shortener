@@ -11,7 +11,7 @@ const Navigation = () => {
 			</ul>
 			<div className='nav__buttons'>
 				<button className='nav__buttons--login'>Login</button>
-				<button className='nav__buttons--signup'>Sign Up</button>
+				<button className='nav__buttons--signup btn'>Sign Up</button>
 			</div>
 		</div>
 	)

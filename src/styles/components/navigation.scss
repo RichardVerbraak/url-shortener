@@ -6,7 +6,7 @@
 
 	&__brand {
 		font-size: 3.2rem;
-		margin-right: 5rem;
+		margin-right: 8rem;
 	}
 
 	&__list {
@@ -41,14 +41,8 @@
 		}
 
 		&--signup {
-			font-family: inherit;
-			font-size: inherit;
-			font-weight: $font-bold;
-			color: #fff;
-			border: none;
 			border-radius: 20px;
 			padding: 0.6rem 2rem;
-			background: $color-blue;
 		}
 	}
 }

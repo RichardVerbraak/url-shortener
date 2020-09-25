@@ -1,0 +1,22 @@
+.header {
+	margin-top: 15rem;
+	width: 50%;
+
+	&__title {
+		color: $color-violet-dark;
+		font-size: 7rem;
+		font-weight: $font-bolder;
+	}
+
+	&__sub {
+		font-size: $font-regular;
+		font-weight: $font-bold;
+		color: $color-grey;
+	}
+
+	&__cta {
+		margin-top: 3rem;
+		padding: 1rem 2rem;
+		border-radius: 3rem;
+	}
+}
