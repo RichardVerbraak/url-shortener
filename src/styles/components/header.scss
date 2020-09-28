@@ -1,17 +1,24 @@
 .header {
+	position: relative;
 	margin-top: 15rem;
 	width: 50%;
-	position: relative;
 	margin-bottom: 40rem;
 
-	// TODO: Make img element and absolute position it relative to the header so it gets taken out of the normal flow and doesnt affect horizontal scrolling
-	&::after {
+	// Pseuo element solution for img
+	// &::after {
+	// 	position: absolute;
+	// 	top: -25%;
+	// 	left: 130%;
+	// 	content: url(../../images/illustration-working.svg);
+	// 	background-size: cover;
+	// 	background-repeat: no-repeat;
+	// }
+
+	// HTML solution for img
+	&__img {
 		position: absolute;
-		top: -25%;
-		left: 120%;
-		content: url(../../images/illustration-working.svg);
-		background-size: cover;
-		background-repeat: no-repeat;
+		top: 15%;
+		right: 10%;
 	}
 
 	&__title {
