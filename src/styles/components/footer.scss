@@ -1,6 +1,61 @@
 .footer {
+	display: flex;
+
+	color: #fff;
+
+	// Bit of space with the text somehow?
 	&__brand {
-		color: #fff;
 		font-size: 3.2rem;
+	}
+
+	// Container for the link boxes
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		flex: 0 0 44%;
+		margin-right: 10rem;
+		margin-left: auto;
+	}
+
+	// The box that holds the links
+	&__box {
+		display: flex;
+		flex-direction: column;
+
+		&--heading {
+			font-weight: 500;
+			font-size: 1.6rem;
+			letter-spacing: 1px;
+			margin-bottom: 2rem;
+		}
+
+		&--link {
+			font-size: 1.6rem;
+			color: $color-grey-violet;
+			transition: all 0.2s;
+
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+
+			&:hover {
+				color: rgba($color-grey-violet, 0.6);
+			}
+		}
+	}
+
+	&__logos {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex: 0 0 15%;
+
+		&--logo {
+			transition: all 0.2s;
+
+			&:hover {
+				opacity: 60%;
+			}
+		}
 	}
 }
