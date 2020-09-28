@@ -1,0 +1,105 @@
+.statistics__header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 17rem;
+
+	&--heading {
+		font-size: 4rem;
+		margin-bottom: 2rem;
+	}
+
+	&--sub {
+		color: $color-grey-violet;
+		width: 45%;
+		text-align: center;
+		font-size: 1.8rem;
+	}
+}
+
+.statistics__cards {
+	display: flex;
+	justify-content: space-between;
+
+	position: relative;
+}
+
+.card {
+	position: relative;
+	background-color: #fff;
+	width: 30%;
+	height: 28rem;
+	padding: 8rem 3rem 0rem 3.5rem;
+	border-radius: 1rem;
+
+	&__img-container {
+		position: absolute;
+		top: -13%;
+		left: 10%;
+		display: flex;
+		background: $color-violet;
+		border-radius: 50%;
+		width: 8rem;
+		height: 8rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		height: 3.5rem;
+		width: 3.5rem;
+	}
+
+	&__heading {
+		margin-bottom: 2rem;
+		font-size: 2.4rem;
+	}
+
+	&__sub {
+		color: $color-grey-violet;
+		font-size: 1.5rem;
+		width: 85%;
+	}
+
+	// The cards
+	&-1 {
+		// position: relative;
+
+		&::after {
+			display: inline-block;
+			content: '';
+			width: 4.3rem;
+			height: 0.7rem;
+			background-color: $color-blue;
+
+			position: absolute;
+			top: 50%;
+			left: 100%;
+		}
+	}
+
+	&-2 {
+		position: absolute;
+		top: 16%;
+		left: 33%;
+
+		&::after {
+			display: inline-block;
+			content: '';
+			width: 4.3rem;
+			height: 0.7rem;
+			background-color: $color-blue;
+
+			position: absolute;
+			top: 50%;
+			left: 100%;
+		}
+	}
+
+	&-3 {
+		position: absolute;
+		top: 37%;
+		left: 66%;
+	}
+}
