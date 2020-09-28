@@ -1,19 +1,11 @@
 import React, { Fragment } from 'react'
-import Navigation from './Navigation'
-import Header from './Header'
+import Heading from './Heading'
 import Statistics from './Statistics'
-import Shortener from './Shortener'
 
 // Could be refactored to something cleaner?
 const Home = () => (
 	<Fragment>
-		<div className='section-heading'>
-			<div className='container'>
-				<Navigation />
-				<Header />
-				<Shortener />
-			</div>
-		</div>
+		<Heading />
 		<div className='section-statistics'>
 			<Statistics />
 		</div>
