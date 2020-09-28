@@ -4,12 +4,18 @@
 	font-weight: $font-bold;
 	color: #fff;
 	border: none;
-	background: $color-blue;
+	background-color: $color-blue;
+
+	transition: all 0.2s;
 
 	cursor: pointer;
 
 	&:focus,
 	&:active {
 		outline: none;
+	}
+
+	&:hover {
+		background-color: rgba($color-blue, 0.65);
 	}
 }

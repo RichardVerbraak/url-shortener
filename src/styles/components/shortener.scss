@@ -11,8 +11,9 @@
 	padding: 5rem 4rem 2rem 4rem;
 	width: 122rem;
 
+	// Not sure how to exactly center this between sections when it's absolute positioned
 	position: absolute;
-	bottom: -8%;
+	bottom: -9%;
 }
 
 .input__container {
@@ -24,6 +25,9 @@
 		padding: 1.7rem 2.5rem;
 		border-radius: 5px;
 		border: solid 2px $color-grey;
+		font-size: 1.8rem;
+		font-family: inherit;
+		color: $color-violet;
 
 		&:active,
 		&:focus {
@@ -41,7 +45,7 @@
 		&::placeholder {
 			font-family: $font-poppins;
 			letter-spacing: 1px;
-			font-size: 1.6rem;
+			font-size: 1.8rem;
 		}
 	}
 
