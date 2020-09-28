@@ -1,5 +1,6 @@
 import React from 'react'
 
+// TODO: Add a section underneath the shortener for showing the newly generated URLS
 const Shortener = () => (
 	<div className='shortener__container'>
 		<div className='input__container'>
