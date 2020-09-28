@@ -1,0 +1,19 @@
+.boost {
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&--heading {
+			color: #fff;
+			font-size: 4rem;
+			margin-bottom: 3rem;
+		}
+
+		&--btn {
+			padding: 1.5rem 4rem;
+			border-radius: 4rem;
+		}
+	}
+}
