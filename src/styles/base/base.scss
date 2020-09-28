@@ -20,6 +20,15 @@ body {
 	overflow-x: hidden;
 }
 
+button {
+	cursor: pointer;
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
 ul {
 	list-style: none;
 }
