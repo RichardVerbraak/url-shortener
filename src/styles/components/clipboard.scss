@@ -1,0 +1,29 @@
+.links {
+	max-width: 122rem;
+	margin: 0 auto;
+	margin-bottom: 12rem;
+
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #fff;
+		border-radius: 5px;
+		padding: 1.5rem 3rem;
+
+		&--url {
+		}
+
+		&--shortened {
+			color: $color-blue;
+			margin-right: 3rem;
+			margin-left: auto;
+		}
+
+		&--copy {
+			font-size: 1.4rem;
+			border-radius: 0.5rem;
+			padding: 1rem 3rem;
+		}
+	}
+}

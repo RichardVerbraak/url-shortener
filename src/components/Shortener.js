@@ -3,6 +3,7 @@ import React, { useState, Fragment } from 'react'
 // TODO: Add a section underneath the shortener for showing the newly generated URLS
 const Shortener = () => {
 	const [url, setUrl] = useState('')
+	const [shortenedUrl, setShortenedUrl] = useState('')
 
 	const request = {
 		method: 'POST',
@@ -15,7 +16,9 @@ const Shortener = () => {
 
 		const data = await res.json()
 
+		setShortenedUrl(`https://rel.ink/${data.hashid}`)
 		console.log(data.hashid)
+		console.log(shortenedUrl)
 	}
 
 	return (
