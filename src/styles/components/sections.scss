@@ -1,7 +1,7 @@
 // Padding is done so the background will change while the content inside is correctly positioned
 
 .section-heading {
-	position: relative;
+	// position: relative;
 	background-color: white;
 
 	padding-top: 5rem;
@@ -10,6 +10,7 @@
 
 // Colors provided by project don't seem correct so I guessed a lighter shade of grey
 .section-statistics {
+	position: relative;
 	background-color: rgba($color-grey-violet, 0.15);
 
 	padding-top: 10rem;

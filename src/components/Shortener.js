@@ -1,9 +1,10 @@
 import React, { useState, Fragment } from 'react'
+import ClipboardLinks from './ClipboardLinks'
 
-// TODO: Add a section underneath the shortener for showing the newly generated URLS
+// DO something completely different than you have now!
+// Figure out how to use the value from the input when button is clicked, onChange does not work with current idea
 const Shortener = () => {
-	const [url, setUrl] = useState('')
-	const [shortenedUrl, setShortenedUrl] = useState('')
+	const [url, setUrl] = useState([])
 
 	const request = {
 		method: 'POST',
@@ -16,9 +17,12 @@ const Shortener = () => {
 
 		const data = await res.json()
 
-		setShortenedUrl(`https://rel.ink/${data.hashid}`)
-		console.log(data.hashid)
-		console.log(shortenedUrl)
+		// Store the urls in localstorage and pull them out of localstorage in clipboard component
+
+		console.log(url)
+		// localStorage.setItem('url', url)
+		// localStorage.setItem('shortened', `https://rel.ink/${data.hashid}`)
+		console.log(localStorage)
 	}
 
 	return (
@@ -31,7 +35,7 @@ const Shortener = () => {
 							className='input__container--input'
 							placeholder='Shorten a link here...'
 							onChange={(e) => {
-								setUrl(e.target.value)
+								setUrl([...url, e.target.value])
 							}}
 						/>
 						<button className='input__container--btn btn' onClick={shortenURL}>
@@ -42,6 +46,7 @@ const Shortener = () => {
 					{!url && <p className='input__container--sub'>Please add a link</p>}
 				</div>
 			</div>
+			{url && <ClipboardLinks url={url} />}
 		</Fragment>
 	)
 }

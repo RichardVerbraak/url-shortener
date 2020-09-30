@@ -8,7 +8,6 @@ const Heading = () => (
 		<div className='container'>
 			<Navigation />
 			<Header />
-			<Shortener />
 		</div>
 	</div>
 )

@@ -1,8 +1,10 @@
 import React from 'react'
 import ClipboardLink from './ClipboardLink'
 
-const ClipboardLinks = ({ url }) => {
-	console.log(url)
+const ClipboardLinks = () => {
+	const urls = localStorage.getItem('url')
+	console.log(urls)
+
 	return (
 		<div className='links'>
 			<ClipboardLink />
