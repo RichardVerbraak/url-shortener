@@ -1,13 +1,26 @@
 import React, { useState, Fragment } from 'react'
+import { useEffect } from 'react'
 import ClipboardLinks from './ClipboardLinks'
 
 const Shortener = () => {
-	const [urls, setUrls] = useState([])
+	// Pull urls from storage and use them in useState (useState runs on mount once)
+	const urlsInStorage = localStorage.getItem('urls')
+		? JSON.parse(localStorage.getItem('urls'))
+		: []
+
+	const [urls, setUrls] = useState(urlsInStorage)
+
+	// For the onChange handler
 	const [url, setUrl] = useState('')
 
 	const postRequest = {
 		method: 'POST',
 	}
+
+	// Set storage again whenever a new url is added
+	useEffect(() => {
+		localStorage.setItem('urls', JSON.stringify(urls))
+	}, [urls])
 
 	const shortenURL = async (e) => {
 		e.preventDefault()
@@ -18,20 +31,17 @@ const Shortener = () => {
 				postRequest
 			)
 
-			const data = await res.json()
+			const { result } = await res.json()
 
-			localStorage.setItem()
+			const urlData = {
+				shortened: result.short_link3,
+				original: result.original_link,
+			}
+
+			setUrls([...urls, urlData])
 		} catch (error) {
 			console.log(error)
 		}
-
-		// I misused the spread operator by spreading out the url like ...url, whoops.
-		setUrls([...urls, url])
-
-		// localStorage.setItem('urls', JSON.stringify(urls))
-		// localStorage.setItem('shortened', `https://rel.ink/${data.hashid}`)
-
-		// console.log(localStorage)
 	}
 
 	return (
@@ -53,7 +63,8 @@ const Shortener = () => {
 					{url && <p className='input__container--sub'>Please add a link</p>}
 				</div>
 			</div>
-			<ClipboardLinks />
+
+			<ClipboardLinks urls={urls} />
 		</Fragment>
 	)
 }

@@ -1,22 +1,11 @@
 .header {
+	display: flex;
 	margin-top: 15rem;
-	width: 50%;
 
-	// Pseuo element solution for img
-	// &::after {
-	// 	position: absolute;
-	// 	top: -25%;
-	// 	left: 130%;
-	// 	content: url(../../images/illustration-working.svg);
-	// 	background-size: cover;
-	// 	background-repeat: no-repeat;
-	// }
+	// Header is wider than the actual container to 'push' out the image and let the content (text) grow wider
+	width: 130rem;
 
-	// HTML solution for img
-	&__img {
-		position: absolute;
-		top: 20%;
-		right: 10%;
+	&__content {
 	}
 
 	&__title {
@@ -29,7 +18,7 @@
 	&__sub {
 		font-size: $font-regular;
 		color: $color-grey-violet;
-		width: 80%;
+		// width: 80%;
 
 		margin-top: 2rem;
 	}
@@ -38,5 +27,11 @@
 		margin-top: 3rem;
 		padding: 1.2rem 3.4rem;
 		border-radius: 3rem;
+	}
+
+	&__img {
+		position: relative;
+		bottom: 5rem;
+		left: 15%;
 	}
 }
