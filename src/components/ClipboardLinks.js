@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ClipboardLink from './ClipboardLink'
 
 const ClipboardLinks = () => {
-	const shortenedURL = localStorage.getItem('shortened')
-	console.log(shortenedURL)
+	// const shortenedURL = localStorage.getItem('shortened')
+	// console.log(shortenedURL)
 
 	return (
 		<div className='links'>
-			<ClipboardLink shortenedURL={shortenedURL} />
+			<ClipboardLink shortenedURL={'Test'} />
 		</div>
 	)
 }
